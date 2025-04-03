@@ -1,0 +1,22 @@
+RTO & RPO
+
+RTO (Recovery Time Objective):
+Target time to restore the system after one instance failure and Autoscaling group instance replacement: 5 minutes
+Configuration issue resolution: 15 minutes
+Availability Zone failover: 5 minutes
+
+RPO (Recovery Point Objective):
+Maximum acceptable data loss: 15 minutes
+Ensure recovery to the last working state within 15 minutes.
+
+Configuration Errors:
+Rollback or fix issues with Python/Terraform/Packer configuration.
+RTO: 15 minutes to fix and redeploy.
+
+Region Failure:
+Deploying Terraform in a new region
+RTO: 20 minutes for failover.
+
+Monitoring & Alerts
+Use CloudWatch Alarms for instance health and system issues.
+Automated alerts notify the team of failures.
